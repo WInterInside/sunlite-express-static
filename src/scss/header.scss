@@ -1,0 +1,162 @@
+.header {
+	background-color: transparent;
+	position: relative;
+	z-index: 1;
+	height: 63px;
+
+	&__wrapper {
+		position: relative;
+		padding-top: 53px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__burger {
+		align-self: flex-start;
+		display: block;
+		width: 72px;
+		height: 31px;
+		flex-shrink: 0;
+		background-color: transparent;
+		color: #fff;
+		padding: 0;
+		border: none;
+		position: relative;
+		z-index: 3;
+		cursor: pointer;
+		transition: opacity .3s;
+
+		& i {
+			display: block;
+			height: 3px;
+			width: 100%;
+			border-radius: 2px;
+			background: currentColor;
+			left: 0;
+			top: 0;
+			margin-bottom: 11px;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&__langs {
+		position: absolute;
+		bottom: 20px;
+		left: calc(50% - 57px);
+
+		& a {
+			color: #fff;
+			font-size: 28px;
+			line-height: 33px;
+			transition: color .3s;
+		}
+
+		& a.current {
+			color: #E7B656;
+		}
+
+		& a:hover {
+			color: #E7B656;
+		}
+	}
+
+	// позже вынести в отдельный блок, что бы было универсально и не ломало бэм
+	&__contact-us {
+		flex-shrink: 0;
+		align-self: flex-start;
+		color: #fff;
+		font-size: 24px;
+		line-height: 35px;
+		background-color: rgba(255, 255, 255, .2);
+		padding: 10px 20px;
+		border-radius: 15px 0 15px 15px;
+		cursor: pointer;
+		transition: background-color .3s, color .3s;
+
+		& span {
+			&:nth-child(1) {
+				display: inline-block;
+			}
+
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+
+		&--white {
+			background-color: #ffffff;
+			color: #333333;
+		}
+
+		&--brown {
+			// позже убрать маргиныв отдельный стиль
+			margin-top: auto;
+			margin-left: auto;
+			padding: 10px 50px;
+			background-color: #5d5e62;
+
+			@media (max-width: 860px) {
+				background-color: #ffffff8b;
+				backdrop-filter: blur(10px);
+			}
+		}
+
+		&:hover {
+			background-color: #E7B656;
+			color: #ffffff;
+		}
+
+		&--yellow {
+			background-color: #E7B656;
+			color: #ffffff;
+
+			&:hover {
+				background-color: #ffffff;
+				color: #333333;
+			}
+		}
+	}
+}
+
+@media (max-width: 860px) {
+	.header {
+		&__wrapper {
+			position: relative;
+			// flex-wrap: wrap;
+		}
+
+		&__burger {
+			width: 46px;
+		}
+
+		&__langs {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			margin-left: auto;
+		}
+
+		&__contact-us {
+			&--main {
+				position: absolute;
+				right: 0;
+				top: 120px;
+			}
+
+			& span {
+				&:nth-child(1) {
+					display: none;
+				}
+
+				&:nth-child(2) {
+					display: inline-block;
+				}
+			}
+
+		}
+	}
+}

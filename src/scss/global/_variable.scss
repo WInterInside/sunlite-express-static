@@ -1,0 +1,40 @@
+//colors
+$c0: transparent;
+$gold: #E7B656;
+$white: #ffffff;
+$black: #000000;
+
+// duration
+$duration : .3s;
+
+// media queries
+$large: "(max-width: 1440px)";
+$medium: "(max-width: 1199px)";
+$small: "(max-width: 1023px)";
+$xsmall: "(max-width: 767px)";
+$xxsmall: "(max-width: 374px)";
+
+// usage example
+// .container {
+// 	background-color: blue;
+
+// 	@media #{$large} {
+// 		background-color: green;
+// 	}
+
+// 	@media #{$medium} {
+// 		background-color: yellow;
+// 	}
+
+// 	@media #{$small} {
+// 		background-color: orange;
+// 	}
+
+// 	@media #{$xsmall} {
+// 		background-color: red;
+// 	}
+
+// 	@media #{$xxsmall} {
+// 		background-color: pink;
+// 	}
+// }

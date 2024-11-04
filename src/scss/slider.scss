@@ -1,0 +1,173 @@
+
+
+.slider {
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+
+	&--friends {
+		padding-top: 100px;
+		border-top: 1px solid #E7B656;
+	}
+
+	&__slide {
+		position: absolute;
+		inset: 0;
+
+		& img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			inset: 0;
+			object-fit: cover;
+		}
+
+		&--text {
+			position: relative;
+		}
+	}
+
+	&__slides {
+		position: relative;
+		height: 430px;
+		width: 745px;
+
+		&--text {
+			height: auto;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-right: 10px;
+	}
+
+	&__nav-item {
+		width: 20px;
+		height: 20px;
+		background-color: #434242;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&.active {
+			background-color: #E7B656;
+		}
+	}
+
+	&__controls-wrapper {
+		display: flex;
+		width: 100%;
+		height: 32px;
+		justify-content: space-between;
+		margin-top: auto;
+
+		&--friends {
+			flex-direction: column-reverse;
+			margin: 0;
+			height: 100%;
+			justify-content: space-between;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		flex-grow: 1;
+		margin-right: 105px;
+	}
+
+	&__arrow {
+		height: 32px;
+		width: 70px;
+		cursor: pointer;
+
+		&--right {
+			transform: scaleX(-1);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__gold-text {
+		font-size: 128px;
+		line-height: 115px;
+		color: #E7B656;
+	}
+}
+
+@media (max-width: 1440px) {
+	.slider {
+		&__controls {
+			margin-right: 30px;
+		}
+
+		&__slides {
+			position: relative;
+			height: 301px;
+			width: 522px;
+
+			&--text {
+				display: flex;
+				height: 100%;
+				justify-content: center;
+			}
+		}
+
+		&__gold-text {
+			font-size: 90px;
+			line-height: 100px;
+			color: #E7B656;
+		}
+	}
+}
+
+@media (max-width: 860px) {
+	.slider {
+		position: relative;
+		flex-direction: column-reverse;
+		width: 100%;
+		margin-top: 40px;
+
+		&__controls {
+			margin-top: 40px;
+			margin-right: 0;
+		}
+
+		&__slides {
+			position: relative;
+			height: 190px;
+			width: 100%;
+
+			&--text {
+				display: flex;
+				height: 100%;
+				justify-content: flex-start;
+			}
+		}
+
+		&__nav-item {
+			width: 15px;
+			height: 15px;
+		}
+
+		&__gold-text {
+			font-size: 64px;
+			line-height: 72px;
+		}
+
+		&__arrow {
+			height: 20px;
+			width: 45px;
+
+			&--text {
+				position: absolute;
+				top: 60px;
+				right: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/DINPro.woff2') format('woff2'),
+        url('../fonts/DINPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro bold';
+    src: url('../fonts/DINPro-Bold.woff2') format('woff2'),
+        url('../fonts/DINPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro medium';
+    src: url('../fonts/DINPro-Medium.woff2') format('woff2'),
+        url('../fonts/DINPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+// это в локал фонтс
+// @include font-face("DINPro-Bold", "DINPro-Bold", 400);
+// @include font-face("DINPro-Medium", "DINPro-Medium", 400);
+// @include font-face("DINPro", "DINPro", 400);
